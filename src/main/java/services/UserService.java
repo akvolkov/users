@@ -101,7 +101,7 @@ public class UserService {
             System.out.println(String.format(ENTER_ROLES_AND_PHONES, "roles", "tester, developer, admin"));
             System.out.print(operation + " user> Roles: ");
             roles = reader.readLine();
-            isCorrectRoles = ChecksUtil.lengthCheck(roles.split(", "));
+            isCorrectRoles = (roles.length() > 0) && ChecksUtil.lengthCheck(roles.split(", "));
         }
         return roles;
     }

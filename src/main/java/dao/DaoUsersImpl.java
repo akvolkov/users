@@ -1,5 +1,6 @@
 package dao;
 
+import com.fasterxml.jackson.databind.exc.MismatchedInputException;
 import entities.User;
 import utils.JsonUtil;
 
@@ -17,7 +18,8 @@ public class DaoUsersImpl implements DaoUsers {
      * @param phones - phones of user
      */
     public void addUser(String firstName, String secondName, String email, String[] roles, String[] phones) {
-        List<User> users = new ArrayList<>(getUsers());
+        List<User> list = getUsers();
+        List<User> users = list == null ? new ArrayList<>() : new ArrayList<>(getUsers());
         User user = new User(firstName, secondName, email, roles, phones);
         users.add(user);
         JsonUtil.toJSON(PATH, users);
@@ -44,7 +46,15 @@ public class DaoUsersImpl implements DaoUsers {
      * @return list of users
      */
     public List<User> getUsers() {
-        return JsonUtil.toJavaObjects(PATH);
+        List<User> users;
+        try {
+            users = JsonUtil.toJavaObjects(PATH);
+        } catch (Exception e) {
+            System.out.println("");
+            e.printStackTrace();
+            return null;
+        }
+        return users;
     }
 
     /**

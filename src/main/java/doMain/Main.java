@@ -14,7 +14,7 @@ public class Main {
                 "It has the ability to create user with parameters: first name, last name, email, roles, phones and save it to a file.\n" +
                 "Number of roles and phones from 1 to 3.\n" +
                 "It has the ability to edit user.\n" +
-                "It has the ability to delete user.\n" +
+                "It has the ability to remove user.\n" +
                 "It has the ability to get information about the user, his roles and phones. \n" +
                 "Enter \"help\" to get help.\n" + SEPARATOR;
         final String HELP = "Enter \"create\" to create User.\n" +

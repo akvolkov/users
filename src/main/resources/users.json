@@ -1,1 +1,17 @@
+<<<<<<< Updated upstream
 
+=======
+[ {
+  "firstName" : "sdf",
+  "secondName" : "sdfsd",
+  "email" : "sgdsg@fsdf.rtr",
+  "roles" : [ "sdvsdgsd" ],
+  "phones" : [ "37500 1234567" ]
+}, {
+  "firstName" : "asfds",
+  "secondName" : "sdgdsgsd",
+  "email" : "as@qwdsf.ry",
+  "roles" : [ "sbsbsb" ],
+  "phones" : [ "37500 1234567" ]
+} ]
+>>>>>>> Stashed changes
